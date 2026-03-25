@@ -12,7 +12,6 @@
             --dark: #1f2937;
             --light: #f8fafcca;
             --gray: #6b7280;
-            color-scheme: light dark; /* Enable automatic dark mode based on user preference  Add light-dark function for dynamic color switching */
         }
 
         html {
@@ -20,8 +19,8 @@
         }
 
         body {
-            background-color: /*rgba(240, 234, 234, 0.212)*/ light-dark(#fff, #444);
-            color: var(--light, --dark);
+            background-color: rgba(240, 234, 234, 0.212);
+            color: var(--dark);
             line-height: 1.6;
         }
 
