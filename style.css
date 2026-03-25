@@ -11,7 +11,7 @@
             --secondary: #1e40afbd;
             --dark: #1f2937;
             --light: #f8fafcca;
-            --gray: #6b7280;
+            --gray: #6b7280; /* colors for the system web design color*/
         }
 
         html {
