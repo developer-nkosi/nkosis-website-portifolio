@@ -18,6 +18,7 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"
       defer
@@ -25,6 +26,7 @@
   </head>
 
   <body>
+    <div id="bg-canvas"></div>
     <!-- Navigation -->
     <nav>
       <div class="container nav-container">
@@ -46,13 +48,15 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
-        <h1>Developer Nkosi</h1>
-        <h2>Aspiring Full‑Stack Developer | Python • JavaScript • SQL</h2>
-        <p>
-          "I design and build functional, user‑friendly websites, with growing
-          skills in backend development and databases."
-        </p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-card" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-scale="1.02">
+          <h1>Developer Nkosi</h1>
+          <h2>Aspiring Full‑Stack Developer | Python • JavaScript • SQL</h2>
+          <p>
+            "I design and build functional, user‑friendly websites, with growing
+            skills in backend development and databases."
+          </p>
+          <a href="#projects" class="btn">View My Work</a>
+        </div>
       </div>
     </section>
 
@@ -85,7 +89,7 @@
             </p>
           </div>
           <div class="profile-img">
-            <div>
+            <div class="profile-tilt" data-tilt data-tilt-max="12" data-tilt-speed="400" data-tilt-scale="1.05">
               <img src="profile.png" alt="Wongani Kasawala Nkosi" />
             </div>
           </div>
@@ -370,18 +374,8 @@
           >Download</a
         >
 
-        <div
-          style="
-            margin-top: 40px;
-            text-align: left;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-          "
-        >
-          <h3 style="color: var(--primary); margin-bottom: 20px">
-            Highlights:
-          </h3>
+        <div class="highlights-wrapper">
+          <h3 class="highlights-title">Highlights:</h3>
           <div class="highlights-grid">
             <article class="highlight-card" data-tilt>
               <div class="highlight-icon">
@@ -420,63 +414,65 @@
     <section class="section contact" id="contact">
       <div class="container">
         <h2 class="section-title">Contact Me</h2>
-        <div class="contact-container">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+        <div class="contact-card">
+          <div class="contact-container">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="devicon-google-plain"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <a href="mailto:eugenenkose@gmail.com">eugenenkose@gmail.com</a>
+                </div>
               </div>
-              <div class="contact-text">
-                <h4>Email</h4>
-                <a href="mailto:eugenenkose@gmail.com">eugenenkose@gmail.com</a>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="devicon-linkedin-plain"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/wongani-nkosi-36b53b297"
+                    target="_blank"
+                    >https://www.linkedin.com/in/wongani-nkosi-36b53b297</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="devicon-github-original"></i>
+                </div>
+                <div class="contact-text">
+                  <h4>GitHub</h4>
+                  <a href="https://github.com/developer-nkosi" target="blank"
+                    >https://github.com/developer-nkosi</a
+                  >
+                </div>
               </div>
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="contact-text">
-                <h4>LinkedIn</h4>
-                <a
-                  href="https://www.linkedin.com/in/wongani-nkosi-36b53b297"
-                  target="_blank"
-                  >https://www.linkedin.com/in/wongani-nkosi-36b53b297</a
-                >
-              </div>
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input type="text" placeholder="Your Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Your Email" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Subject" required />
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-full-width">
+                  Send Message
+                </button>
+              </form>
             </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-github"></i>
-              </div>
-              <div class="contact-text">
-                <h4>GitHub</h4>
-                <a href="https://github.com/developer-nkosi" target="blank"
-                  >https://github.com/developer-nkosi</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required />
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required />
-              </div>
-              <div class="form-group">
-                <input type="text" placeholder="Subject" required />
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" required></textarea>
-              </div>
-              <button type="submit" class="btn" style="width: 100%">
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
       </div>
@@ -490,18 +486,104 @@
           <a
             href="https://www.linkedin.com/in/wongani-nkosi-36b53b297"
             target="_blank"
-            ><i class="fab fa-linkedin"></i
+            ><i class="devicon-linkedin-plain"></i
           ></a>
           <a href="https://github.com/developer-nkosi" target="_blank"
-            ><i class="fab fa-github"></i
+            ><i class="devicon-github-original"></i
           ></a>
           <a href="mailto:eugenenkose@gmail.com"
-            ><i class="fas fa-envelope"></i
+            ><i class="devicon-google-plain"></i
           ></a>
         </div>
         <p>Aspiring Full-Stack Developer | Python • JavaScript • SQL</p>
       </div>
     </footer>
     <script src="scrpit.js"></script>
+    <script>
+      (function () {
+        var container = document.getElementById('bg-canvas');
+        if (!container) return;
+
+        var SEPARATION = 150;
+        var AMOUNTX = 40;
+        var AMOUNTY = 60;
+
+        var scene = new THREE.Scene();
+        scene.fog = new THREE.Fog(0xffffff, 2000, 10000);
+
+        var camera = new THREE.PerspectiveCamera(
+          60,
+          window.innerWidth / window.innerHeight,
+          1,
+          10000
+        );
+        camera.position.set(0, 355, 1220);
+
+        var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(scene.fog.color, 0);
+        container.appendChild(renderer.domElement);
+
+        var positions = [];
+        for (var ix = 0; ix < AMOUNTX; ix++) {
+          for (var iy = 0; iy < AMOUNTY; iy++) {
+            var x = ix * SEPARATION - (AMOUNTX * SEPARATION) / 2;
+            var y = 0;
+            var z = iy * SEPARATION - (AMOUNTY * SEPARATION) / 2;
+            positions.push(x, y, z);
+          }
+        }
+
+        var geometry = new THREE.BufferGeometry();
+        geometry.setAttribute(
+          'position',
+          new THREE.Float32BufferAttribute(positions, 3)
+        );
+
+        var material = new THREE.PointsMaterial({
+          size: 8,
+          color: 0x2563eb,
+          transparent: true,
+          opacity: 0.8,
+          sizeAttenuation: true,
+        });
+
+        var points = new THREE.Points(geometry, material);
+        scene.add(points);
+
+        var count = 0;
+        var posAttr = geometry.attributes.position;
+        var posArray = posAttr.array;
+
+        function animate() {
+          requestAnimationFrame(animate);
+
+          var i = 0;
+          for (var ix = 0; ix < AMOUNTX; ix++) {
+            for (var iy = 0; iy < AMOUNTY; iy++) {
+              var index = i * 3;
+              posArray[index + 1] =
+                Math.sin((ix + count) * 0.3) * 50 +
+                Math.sin((iy + count) * 0.5) * 50;
+              i++;
+            }
+          }
+          posAttr.needsUpdate = true;
+
+          renderer.render(scene, camera);
+          count += 0.1;
+        }
+
+        function onResize() {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', onResize);
+
+        animate();
+      })();
+    </script>
   </body>
 </html>
