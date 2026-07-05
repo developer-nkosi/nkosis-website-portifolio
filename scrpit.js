@@ -88,7 +88,7 @@ window.addEventListener('scroll', function () {
     );
 
     var material = new THREE.PointsMaterial({
-        size: 8,
+        size: 10,
         color: 0x2563eb,
         transparent: true,
         opacity: 0.8,
