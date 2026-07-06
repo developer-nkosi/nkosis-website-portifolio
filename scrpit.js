@@ -1,12 +1,30 @@
 // Mobile Navigation Toggle
-document.querySelector('.hamburger').addEventListener('click', function () {
-    document.querySelector('.nav-links').classList.toggle('active');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navOverlay = document.querySelector('.nav-overlay');
+const navItems = document.querySelectorAll('.nav-links li');
+
+hamburger.addEventListener('click', function () {
+    this.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function () {
-        document.querySelector('.nav-links').classList.remove('active');
+navOverlay.addEventListener('click', function () {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+});
+
+// Close mobile menu when clicking on a link with staggered animation
+navItems.forEach(item => {
+    item.addEventListener('click', function () {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
 
@@ -35,14 +53,31 @@ document.querySelectorAll('a[href="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to navbar
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scrollTop');
+
 window.addEventListener('scroll', function () {
+    // Navbar shadow effect
     const nav = document.querySelector('nav');
     if (window.scrollY > 50) {
         nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
     } else {
         nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
     }
+
+    // Scroll to top button visibility
+    if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+    } else {
+        scrollTopBtn.classList.remove('visible');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 // Initialize the background animation using Three.js

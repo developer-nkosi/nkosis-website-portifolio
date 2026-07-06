@@ -1,0 +1,37 @@
+# nkosis-website-portifolio
+# Requirements / Dependencies
+#
+# This is a static HTML/CSS/JavaScript portfolio website.
+# No Python packages or Node.js modules are required.
+#
+# All external libraries are loaded via CDN in index.html:
+#
+# - Three.js r128 (3D particle wave background animation)
+#   https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js
+#
+# - Vanilla Tilt.js 1.8.1 (3D tilt hover effects)
+#   https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js
+#
+# - Font Awesome 6.4.0 (icons)
+#   https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+#
+# - DevIcons (developer/programming language icons)
+#   https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
+#
+# CSS Features Used:
+# - backdrop-filter (glassmorphism/frosted glass effects)
+# - CSS Grid & Flexbox (layout)
+# - CSS Custom Properties (theming + dark mode)
+# - @media (prefers-color-scheme: dark) (automatic dark mode)
+# - Keyframe animations & transitions
+#
+# Features:
+# - Automatic light/dark mode (follows system preference)
+# - Clickable social icons (email, LinkedIn, GitHub)
+# - Floating scroll-to-top button
+# - Animated hamburger menu with slide-in drawer
+# - Frosted glass About Me section for text readability
+# - Particle wave background (Three.js)
+#
+# To run locally, simply open index.html in a modern web browser.
+# No build tools, package managers, or server required.
