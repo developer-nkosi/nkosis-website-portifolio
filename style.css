@@ -572,6 +572,7 @@ nav {
     margin-right: 18px;
     font-size: 1.4rem;
     flex-shrink: 0;
+    /* text-shadow: none; */
     transition: all 0.3s ease;
     text-decoration: none;
 }
