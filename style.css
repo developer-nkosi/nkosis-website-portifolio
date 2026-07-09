@@ -105,6 +105,9 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
+    font-weight: bolder;
+    font-size: large;
+    font-family: monospace;
     gap: 30px;
 }
 
@@ -205,10 +208,10 @@ nav {
     will-change: transform;
     transform-style: preserve-3d;
 }
-
+/* 
 .hero-card:hover {
     box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
-}
+} */
 
 .hero-card h1 {
     font-size: 3.5rem;
@@ -333,7 +336,7 @@ nav {
 
 .project-card:hover {
     transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.25);
+    /* box-shadow: 0 25px 50px rgba(37, 99, 235, 0.25); */
 }
 
 .project-thumb {
@@ -485,7 +488,7 @@ nav {
 
 .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+    /* box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15); */
 }
 
 .skill-category h3 {
@@ -539,9 +542,9 @@ nav {
     transition: box-shadow 0.3s ease;
 }
 
-.contact-card:hover {
+/* .contact-card:hover {
     box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
-}
+} */
 
 .contact-container {
     display: flex;
@@ -580,7 +583,7 @@ nav {
 .contact-icon:hover {
     transform: translateY(-3px) scale(1.1);
     cursor: pointer;
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    /* box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3); */
 }
 
 .contact-icon i {
@@ -738,7 +741,7 @@ footer {
 
 .highlight-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+    /* box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15); */
 }
 
 .highlight-icon {
